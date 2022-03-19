@@ -1,6 +1,5 @@
 // Hi If Do You Use My Code, Please Add My Domain Into Your Site, Thanks !
 var iframe = document.getElementById("iframe");
-var button_go = document.getElementById("button_go");
 var iframe_div = document.getElementById("iframe-div");
 var root_base = document.getElementById("root-base");
 var input_url = document.getElementById('input_url');
@@ -28,21 +27,21 @@ Swal.fire({
     cancelButtonAriaLabel: 'Thumbs down'
 })
 
-button_go.onclick = (e) => {
-    if (canGo(getUrl(input_url))) {
-        url = designUrl(getUrl(input_url));
-        iframe_div.style.display = "block";
-        root_base.style.display = "none"
-        iframe.setAttribute("src", url)
-    } else {
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Url không được để trống!',
-            footer: '<p href="#">Atazo</p>'
-        })
-    }
-}
+// button_go.onclick = (e) => {
+//     if (canGo(getUrl(input_url))) {
+//         url = designUrl(getUrl(input_url));
+//         iframe_div.style.display = "block";
+//         root_base.style.display = "none"
+//         iframe.setAttribute("src", url)
+//     } else {
+//         Swal.fire({
+//             icon: 'error',
+//             title: 'Oops...',
+//             text: 'Url không được để trống!',
+//             footer: '<p href="#">Atazo</p>'
+//         })
+//     }
+// }
 
 
 function designUrl(url) {

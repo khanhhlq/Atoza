@@ -122,7 +122,6 @@ function RenderToView(ListImage, Result) {
             question_viewer.appendChild(element);
         }
     } else {
-        // There is no image link
         RenderToViewWithQuestionText(GetQuestionText(Result));
     }
 }
@@ -140,9 +139,10 @@ function RenderToViewWithQuestionText(ListQuestionAndAnswer) {
         element.style.padding = "5px";
         element.innerHTML = `Câu ${i + 1} : ${questionObj.questionText}`;
 
-        answer.innerHTML = `${answerObj[0].key}. ${answerObj[0].content} \n 
+        answer.innerHTML = `
+        ${answerObj[0].key}. ${answerObj[0].content} \n 
         ${answerObj[1].key}. ${answerObj[1].content} \n
-        ${answerObj[2].key}. ${answerObj[3].content} \n
+        ${answerObj[2].key}. ${answerObj[2].content} \n
         ${answerObj[3].key}. ${answerObj[3].content}`
         answer.style.padding = "5px";
         question_viewer.appendChild(element);
