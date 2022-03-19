@@ -1,0 +1,224 @@
+html,
+body {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
+#root-base {
+  padding: 5%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+#form {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tools-controll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#input_url {
+  margin-bottom: 10px;
+  display: block;
+}
+
+#button_go {
+  margin-bottom: 5px;
+  padding: 3px 20px 3px 20px;
+}
+
+#information-div {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#iframe-div,
+#question-viewer {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#question-viewer {
+  overflow: auto;
+  display: none;
+}
+
+#go_back {
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+#fab-gg {
+  z-index: 999;
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+}
+#modal-contentid {
+  height: 100% !important;
+}
+
+.in4-span {
+  font-size: 15px;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: rgb(0, 195, 255);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+@media (min-width: 1200px) {
+  #question-viewer {
+    padding-left: 20%;
+    padding-bottom: 20%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .in4-span {
+    font-size: 12px;
+  }
+}
+
+@keyframes colorAnimation {
+  0% {
+    border-color: #a1a1a1;
+  }
+  50% {
+    border-color: #ffffff;
+  }
+
+  100% {
+    border-color: #a1a1a1;
+  }
+}
+
+@keyframes colorAnimation_r {
+  0% {
+    box-shadow: 0px 0px rgb(196, 196, 196);
+    border-color: #a1a1a1;
+  }
+  50% {
+    box-shadow: 2px 2px rgb(223, 223, 223);
+    border-color: #ffffff;
+  }
+
+  100% {
+    box-shadow: 0px 0px rgb(196, 196, 196);
+    border-color: #a1a1a1;
+  }
+}
+
+@media (max-width: 721px) {
+  #root-base {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://data.whicdn.com/images/337087275/original.gif);
+  }
+
+  #information-div {
+    color: white;
+  }
+
+  #alert-pc {
+    display: none;
+  }
+
+  #input_password,
+  #input_url {
+    font-size: 14px;
+    animation: colorAnimation_r 4s infinite;
+    animation-direction: reverse;
+    color: white !important;
+    background: transparent;
+  }
+  #input_password::placeholder {
+    color: white;
+  }
+
+  #input_password {
+    animation: colorAnimation 4s infinite;
+    border-top-right-radius: 50px;
+  }
+
+  #input_url::placeholder {
+    color: white;
+  }
+
+  #basic-addon1 {
+    font-size: 14px;
+    background: transparent;
+    color: white !important;
+  }
+}

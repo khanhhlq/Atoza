@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Atoza</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="root-base">
+        <div id="form">
+            <input type="text" id="input_url" class="form-control" placeholder="Link đề 🧀" />
+            <div id="tools-controll">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Nhập mật khẩu (nếu có) 🌮</span>
+                    </div>
+                    <input id="input_password" type="text" class="form-control" placeholder=". . ."
+                        aria-label="password" aria-describedby="basic-addon1">
+                </div>
+                <button id="button_view" class="btn btn-info" onclick="onClickGetQuestion()">XEM CÂU
+                    HỎI</button>
+            </div>
+        </div>
+        <div class="wating-box" id="wating-box"
+            style="display: none; flex-direction: column; justify-content: center; align-items: center;">
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="status-msg" class="alert alert-primary" role="alert">
+                This is a primary alert—check it out!
+            </div>
+        </div>
+        <!-- <div style="width: 85%; border: 1px solid #ccc; height: 1px; margin-top: 10px;"></div> -->
+    </div>
+    <div id="iframe-div">
+        <div style="display: flex; flex-direction: row; align-items: center;">
+            <button onclick="go_back()" id="go_back" class="btn btn-info">Quay về</button>
+        </div>
+        <iframe id="iframe" width="100%" height="100%" title="byDandelions.pdf" frameborder="0"
+            allow="accelerometer;autoplay;clipboard-write;encrypted-media; gyroscope; picture-in-picture;"></iframe>
+    </div>
+    <div id="question-viewer">
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./logic.js"></script>
+<script src="./getQuestion.js"></script>
+
+</html>
